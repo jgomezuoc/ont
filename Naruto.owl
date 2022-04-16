@@ -1,0 +1,785 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#"
+     xml:base="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:Naruto="urn:absolute:Naruto#"
+     xmlns:Naruto1="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#"
+     xmlns:untitled-ontology-3="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto">
+        <rdfs:comment>Author: Juan Antonio Gómez Tacoronte</rdfs:comment>
+        <rdfs:label>Naruto (Series)</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#belongsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#belongsTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Character"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Clan"/>
+        <rdfs:comment>Propiedad que indica que un personaje pertenece a un clan</rdfs:comment>
+        <rdfs:label>belongsTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#madeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#madeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Jutsu"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Element"/>
+        <rdfs:comment>Propiedad que indica de que elemento esta hecho un jutsu (No todos los jutsus tienen elemento)</rdfs:comment>
+        <rdfs:label>madeOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#use -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#use">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Character"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Jutsu"/>
+        <rdfs:comment>Propiedad que indica que un personaje puede utilizar un Jutsu</rdfs:comment>
+        <rdfs:label>use</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#howManyElementHas -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#howManyElementHas">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Element"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment>Propiedad que indica de cuantos elementos primordiales esta compuesto un elemento</rdfs:comment>
+        <rdfs:label>howManyElementHas</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#isBloodlineLimited -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#isBloodlineLimited">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Jutsu"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Propiedad que indica si un jutsu tiene limitado su aprendizaje por herencia de linaje o puede ser aprendido mediante entrenamiento</rdfs:comment>
+        <rdfs:label>isBloodlineLimited</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Byakugan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Byakugan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#DoeJutsu"/>
+        <rdfs:label>Byakugan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Character -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Character">
+        <rdfs:label>Character</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Chidori -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Chidori">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninjutsu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Clan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Clan">
+        <rdfs:label>Clan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Clone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Clone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninjutsu"/>
+        <rdfs:label>Clone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#DoeJutsu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#DoeJutsu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Jutsu"/>
+        <rdfs:label>DoeJutsu</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Earth -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Earth">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Element"/>
+        <rdfs:label>Earth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Element -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Element">
+        <rdfs:label>Element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Fire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Fire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Element"/>
+        <rdfs:label>Fire</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Genjutsu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Genjutsu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Jutsu"/>
+        <rdfs:label>Genjutsu</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Jutsu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Jutsu">
+        <rdfs:label>Jutsu</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Light -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Light">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Element"/>
+        <rdfs:label>Light</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Lightning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Lightning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninja -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninja">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Character"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#use"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Jutsu"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Ninja</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninjutsu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninjutsu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Jutsu"/>
+        <rdfs:label>Ninjutsu</rdfs:label>
+        <rdfs:seeAlso>https://dbpedia.org/page/Ninjutsu</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rasengan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rasengan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninjutsu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rinnengan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rinnengan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#DoeJutsu"/>
+        <rdfs:label>Rinnengan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Senjutsu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Senjutsu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Jutsu"/>
+        <rdfs:label>Senjutsu</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Shadow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Shadow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Element"/>
+        <rdfs:label>Shadow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Sharingan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Sharingan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#DoeJutsu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Summon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Summon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninjutsu"/>
+        <rdfs:label>Summon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Taijutsu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Taijutsu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Jutsu"/>
+        <rdfs:label>Taijutsu</rdfs:label>
+        <rdfs:seeAlso>https://dbpedia.org/page/Taijutsu</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Water -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Water">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Wind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Wind">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Chidori -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Chidori">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Chidori"/>
+        <Naruto1:madeOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Lightning"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Haku -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Haku">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninja"/>
+        <Naruto1:belongsTo rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Yuki"/>
+        <Naruto1:use rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ice_Mirror"/>
+        <Naruto1:use rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Water_Clone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Himawari -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Himawari">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Character"/>
+        <Naruto1:belongsTo rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Uzumaki"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Water"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Wind"/>
+        <Naruto1:howManyElementHas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Naruto1:howManyElementHas>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ice_Mirror -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ice_Mirror">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninjutsu"/>
+        <Naruto1:madeOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Kirin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Kirin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Chidori"/>
+        <Naruto1:madeOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Lightning"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Lightning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Lightning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Lightning"/>
+        <Naruto1:howManyElementHas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Naruto1:howManyElementHas>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Mangekyo_Sharingan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Mangekyo_Sharingan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Sharingan"/>
+        <Naruto1:isBloodlineLimited rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Naruto1:isBloodlineLimited>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Naruto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Naruto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninja"/>
+        <Naruto1:belongsTo rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Uzumaki"/>
+        <Naruto1:use rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Odama_Rasengan"/>
+        <Naruto1:use rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rasengan"/>
+        <Naruto1:use rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rasenshuriken"/>
+        <Naruto1:use rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Shadow_Clone"/>
+        <rdfs:comment>Protagonista de la serie, Naruto Uzumaki</rdfs:comment>
+        <rdfs:label>Naruto</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Odama_Rasengan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Odama_Rasengan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rasengan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rasengan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rasengan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rasengan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rasenshuriken -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rasenshuriken">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rasengan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Sasuke -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Sasuke">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninja"/>
+        <Naruto1:belongsTo rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Uchiha"/>
+        <Naruto1:use rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Chidori"/>
+        <Naruto1:use rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Kirin"/>
+        <Naruto1:use rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Mangekyo_Sharingan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Shadow_Clone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Shadow_Clone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Clone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Sharingan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Sharingan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Sharingan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Uchiha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Uchiha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Clan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Uzumaki -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Uzumaki">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Clan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Water -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Water">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Water"/>
+        <Naruto1:howManyElementHas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Naruto1:howManyElementHas>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Water_Clone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Water_Clone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Clone"/>
+        <Naruto1:madeOf rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Water"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Wind -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Wind">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Wind"/>
+        <Naruto1:howManyElementHas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Naruto1:howManyElementHas>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Yuki -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Yuki">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Clan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Chidori">
+        <rdfs:label>Chidori</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Lightning">
+        <rdfs:label>Lightning</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rasengan">
+        <rdfs:label>Rasengan</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Sharingan">
+        <rdfs:label>Sharingan</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Water">
+        <rdfs:label>Water</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Wind">
+        <rdfs:label>Wind</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Byakugan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rinnengan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Sharingan"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Chidori"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Clone"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rasengan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Summon"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#DoeJutsu"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Genjutsu"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninjutsu"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Senjutsu"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Taijutsu"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#j">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#e">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La serie nos especifica que todos los jutsus oculares estan limitados por el linaje del personaje</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">allDoejutsusAreBloodlineLimited</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#DoeJutsu"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#j"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#isBloodlineLimited"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#j"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Regla especificada en al serie donde indican que todos los personajes del clan Uchiha pueden utilizar el Sharingan</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">allUchihasHaveSharingan</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#belongsTo"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#c"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Uchiha"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#use"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#c"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Sharingan"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En la serie especifican que todos los jutsus que se componen de 2 o mas elementos estan limitados por el linaje del personaje</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">allMultiElementalJutsusAreBloodlineLimited</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#madeOf"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#j"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                <swrl:arguments>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#x"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#howManyElementHas"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#e"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#x"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/Naruto#isBloodlineLimited"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#j"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
