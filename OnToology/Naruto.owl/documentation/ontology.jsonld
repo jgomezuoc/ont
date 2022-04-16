@@ -1,0 +1,733 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Jutsu"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#use"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#DoeJutsu"
+    }, {
+      "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Genjutsu"
+    }, {
+      "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninjutsu"
+    }, {
+      "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Senjutsu"
+    }, {
+      "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Taijutsu"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "La serie nos especifica que todos los jutsus oculares estan limitados por el linaje del personaje"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "allDoejutsusAreBloodlineLimited"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid19"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid21"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#j"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#DoeJutsu"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Byakugan"
+    }, {
+      "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rinnengan"
+    }, {
+      "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Sharingan"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#j"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#isBloodlineLimited"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Regla especificada en al serie donde indican que todos los personajes del clan Uchiha pueden utilizar el Sharingan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "allUchihasHaveSharingan"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid24"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid26"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#c"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Uchiha"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#belongsTo"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#c"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Sharingan"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#use"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "En la serie especifican que todos los jutsus que se componen de 2 o mas elementos estan limitados por el linaje del personaje"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "allMultiElementalJutsusAreBloodlineLimited"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid35"
+    }, {
+      "@id" : "_:genid31"
+    }, {
+      "@id" : "_:genid29"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid37"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#e"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#x"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#howManyElementHas"
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
+  "http://www.w3.org/2003/11/swrl#arguments" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#x"
+    }, {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "2"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#builtin" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#j"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#e"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#madeOf"
+  } ]
+}, {
+  "@id" : "_:genid37",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#j"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#isBloodlineLimited"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Chidori"
+    }, {
+      "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Clone"
+    }, {
+      "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rasengan"
+    }, {
+      "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Summon"
+    } ]
+  } ]
+}, {
+  "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Author: Juan Antonio Gómez Tacoronte"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Naruto (Series)"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Byakugan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Byakugan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#DoeJutsu"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Character",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Character"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Chidori",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#madeOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Lightning"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Chidori"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Chidori"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninjutsu"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Clan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Clan"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Clone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Clone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninjutsu"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#DoeJutsu",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DoeJutsu"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Jutsu"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Earth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Earth"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Element"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Element",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Element"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Fire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Element"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Genjutsu",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Genjutsu"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Jutsu"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Haku",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#belongsTo" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Yuki"
+  } ],
+  "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#use" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ice_Mirror"
+  }, {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Water_Clone"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninja"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Himawari",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#belongsTo" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Uzumaki"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Character"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#howManyElementHas" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Water"
+  }, {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Wind"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ice_Mirror",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#madeOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ice"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninjutsu"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Jutsu",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Jutsu"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Kirin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#madeOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Lightning"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Chidori"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Light",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Light"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Element"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Lightning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#howManyElementHas" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Lightning"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Lightning"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Element"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Mangekyo_Sharingan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#isBloodlineLimited" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Sharingan"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Naruto",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#belongsTo" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Uzumaki"
+  } ],
+  "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#use" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Odama_Rasengan"
+  }, {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rasengan"
+  }, {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rasenshuriken"
+  }, {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Shadow_Clone"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninja"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Protagonista de la serie, Naruto Uzumaki"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Naruto"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninja",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ninja"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Character"
+  }, {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninjutsu",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ninjutsu"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://dbpedia.org/page/Ninjutsu"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Jutsu"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Odama_Rasengan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rasengan"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rasengan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rasengan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Rasengan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninjutsu"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rasenshuriken",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rasengan"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Rinnengan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Rinnengan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#DoeJutsu"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Sasuke",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#belongsTo" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Uchiha"
+  } ],
+  "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#use" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Chidori"
+  }, {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Kirin"
+  }, {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Mangekyo_Sharingan"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninja"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Senjutsu",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Senjutsu"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Jutsu"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Shadow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Shadow"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Element"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Shadow_Clone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Clone"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Sharingan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Sharingan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Sharingan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#DoeJutsu"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Summon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Summon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Ninjutsu"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Taijutsu",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Taijutsu"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://dbpedia.org/page/Taijutsu"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Jutsu"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Uchiha",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Clan"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Uzumaki",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Clan"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Water",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#howManyElementHas" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Water"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Water"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Element"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Water_Clone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#madeOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Water"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Clone"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Wind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#howManyElementHas" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Wind"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Wind"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Element"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Yuki",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Clan"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#belongsTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Propiedad que indica que un personaje pertenece a un clan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Character"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "belongsTo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Clan"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#howManyElementHas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Propiedad que indica de cuantos elementos primordiales esta compuesto un elemento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "howManyElementHas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#isBloodlineLimited",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Propiedad que indica si un jutsu tiene limitado su aprendizaje por herencia de linaje o puede ser aprendido mediante entrenamiento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Jutsu"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "isBloodlineLimited"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#madeOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Propiedad que indica de que elemento esta hecho un jutsu (No todos los jutsus tienen elemento)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Jutsu"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "madeOf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#use",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Propiedad que indica que un personaje puede utilizar un Jutsu"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Character"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "use"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/Naruto#Jutsu"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#c",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#e",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#j",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#x",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrlb#greaterThanOrEqual",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Builtin" ]
+} ]
